@@ -1,0 +1,13 @@
+<h1>Student Name: <%= @student.name %></h1>
+
+<h2>Ducks Owned:</h2>
+
+<ul>
+    <% @student.ducks.each do |duck| %>
+        <li><%= duck.name %></li>
+    <% end %> 
+</ul>
+
+<%= link_to 'Return to All Students', students_path %>
+<br>
+<%= link_to 'Edit Information', edit_student_path(@student) %>
