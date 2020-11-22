@@ -1,0 +1,17 @@
+<h1>Edit <%= @student.name %>'s Page</h1>
+
+<% if flash[:my_errors] %>
+    <%= flash[:my_errors] %>
+<% end %>
+
+<%= form_for @student do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br>
+    <br>
+    <%= f.label :mod %>
+    <%= f.text_field :mod %>
+    <br>
+    <br>
+    <%= f.submit %>
+<% end %>
